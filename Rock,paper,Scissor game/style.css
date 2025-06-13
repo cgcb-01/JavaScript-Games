@@ -1,0 +1,212 @@
+* {
+  background-color: #0e0d0d;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  overflow-y: hidden;
+}
+
+.header {
+  margin-bottom: 15px;
+}
+.header h1 {
+  color: rgb(255, 213, 1);
+  text-align: center;
+  margin: 20px;
+  font-family: sans-serif;
+}
+.header p {
+  color: white;
+  text-align: center;
+  margin: 10px;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+.gamefield {
+  display: flex;
+  flex-direction: row;
+  margin: 10px;
+  width: 200vh;
+  justify-content: space-between;
+}
+.gamefield .user {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.gamefield .user h1 {
+  color: rgb(245, 5, 5);
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
+.gamefield .user .gameimg {
+  width: 400px;
+  height: 400px;
+  animation: plmove 1s infinite;
+}
+.gamefield .result {
+  display: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  margin: 10px;
+  min-width: 200px;
+  padding: 10px;
+}
+.gamefield .result h1 {
+  color: white;
+  font-size: 2rem;
+  margin-bottom: 5px;
+}
+.gamefield .result p {
+  color: white;
+  font-size: 1.2rem;
+  margin-top: 15px;
+}
+.gamefield .result button {
+  color: white;
+  padding: 10px 20px;
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.911), 0 0 20px rgba(0, 153, 255, 0.911), 0 0 10px rgba(0, 153, 255, 0.911);
+  border-radius: 6px;
+  border-width: 3px;
+  border-color: white;
+  margin-top: 25px;
+}
+.gamefield .pc {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin: 20px;
+}
+.gamefield .pc h1 {
+  color: rgb(3, 99, 244);
+  text-align: center;
+  margin-bottom: 30px;
+  font-family: sans-serif;
+}
+.gamefield .pc .gameimg {
+  width: 400px;
+  height: 400px;
+  transform: scaleX(-1);
+  animation: pcmove 1s infinite;
+}
+.gamefield .play {
+  border-width: 0px;
+  border-radius: 5px;
+  color: yellow;
+  padding: 10px 15px;
+  margin: 10px;
+  font-size: 40px;
+  width: 80px;
+  word-wrap: break-word;
+  height: 400px;
+  font-family: serif;
+  font-weight: bold;
+  box-shadow: 0 0 5px rgb(115, 255, 0), 0 0 15px rgb(115, 255, 0), 0 0 15px rgb(115, 255, 0);
+  background: rgb(1, 79, 10);
+  border-color: rgb(255, 221, 0);
+  border-width: 3px;
+}
+.gamefield .play:hover {
+  box-shadow: 0 0 5px rgb(115, 255, 0), 0 0 20px rgb(115, 255, 0), 0 0 20px rgb(115, 255, 0);
+}
+.gamefield .play:active {
+  background: green;
+}
+
+@keyframes pcmove {
+  from {
+    transform: scaleX(-1) rotate(0deg);
+  }
+  40% {
+    transform: scaleX(-1) rotate(-10deg);
+  }
+  80% {
+    transform: scaleX(-1) rotate(10deg);
+  }
+  100% {
+    transform: scaleX(-1) rotate(0deg);
+  }
+}
+@keyframes plmove {
+  from {
+    transform: rotate(0deg);
+  }
+  40% {
+    transform: rotate(-10deg);
+  }
+  80% {
+    transform: rotate(10deg);
+  }
+  100% {
+    transform: rotate(0deg);
+  }
+}
+.gameimg.shrink {
+  width: 400px !important;
+  height: 400px !important;
+  transition: all 0.4s ease;
+}
+
+.choose {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.choose p {
+  color: rgb(1, 244, 1);
+  margin-bottom: 10px;
+  font-family: serif;
+  font-size: 2rem;
+}
+.choose .imgChoice {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+.choose .imgChoice button {
+  margin: 15px;
+  border-color: white;
+  border-radius: 10px;
+}
+.choose .imgChoice button img {
+  width: 300px;
+  height: 300px;
+}
+.choose .imgChoice .b1 {
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.911), 0 0 20px rgba(0, 153, 255, 0.911), 0 0 10px rgba(0, 153, 255, 0.911);
+}
+.choose .imgChoice .b3 {
+  box-shadow: 0 0 10px rgba(255, 25, 0, 0.9), 0 0 20px rgba(255, 25, 0, 0.9), 0 0 10px rgba(255, 25, 0, 0.9);
+}
+.choose .imgChoice .b2 {
+  box-shadow: 0 0 10px rgba(255, 213, 5, 0.9), 0 0 20px rgba(255, 213, 5, 0.9), 0 0 10px rgba(255, 213, 5, 0.9);
+}
+.choose .imgChoice .b1:active {
+  box-shadow: 0 0 10px rgba(0, 153, 255, 0.911), 0 0 20px rgba(0, 153, 255, 0.911), 0 0 20px rgba(0, 153, 255, 0.911);
+}
+.choose .imgChoice .b2:active {
+  box-shadow: 0 0 10px rgba(255, 213, 5, 0.9), 0 0 20px rgba(255, 213, 5, 0.9), 0 0 20px rgba(255, 213, 5, 0.9);
+}
+.choose .imgChoice .b3:active {
+  box-shadow: 0 0 10px rgba(255, 25, 0, 0.9), 0 0 20px rgba(255, 25, 0, 0.9), 0 0 20px rgba(255, 25, 0, 0.9);
+}
+.choose .exit {
+  color: white;
+  padding: 10px;
+  margin-top: 15px;
+  border-radius: 7px;
+  font-family: serif;
+  font-size: larger;
+  border-color: white;
+  box-shadow: 0 0 5px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0), 0 0 20px rgb(255, 0, 0);
+}/*# sourceMappingURL=style.css.map */
