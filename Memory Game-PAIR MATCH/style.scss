@@ -1,0 +1,108 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #000; // Black background
+  height: 100vh;                    
+  width: 100vw;                     
+  overflow: hidden;
+  background-image: url("https://i.pinimg.com/736x/2b/bd/14/2bbd1493771162027939c305e952c748.jpg");
+  background-repeat: repeat;      
+  background-size: auto;            
+  background-position: top left;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: baseline;
+  font-family: Verdana, sans-serif;
+  
+}
+ h1{
+    color:rgb(47, 255, 0);
+    margin:10px;
+    font-family: 'Franklin Gothic Medium';
+    background:none;
+    text-align: center;
+    span{
+      color:white;
+      background:none;
+    }
+  }
+.imgrow1 {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+  width: 90%;
+  margin-top: 20px;
+}
+
+.card {
+  width: 100px;
+  height: 100px;
+  perspective: 1000px;
+  cursor: pointer;
+  position: relative;
+ margin: 10px;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transform-style: preserve-3d;
+  transition: transform 0.6s ease;
+}
+
+.card.flipped .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  border-radius: 7px;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  font-size: 2rem;
+}
+
+.card-front {
+  background-color: #000;
+  background-image: url('./images/Download Free Vectors, Images, Photos & Videos _ Vecteezy.jpeg');
+  background-size: cover;
+  background-position: center;
+  border: 1px solid white;
+}
+
+.card-back {
+  background-color: rgb(148, 100, 4);
+  color: white;
+  transform: rotateY(180deg);
+  border: 1px solid white;
+}
+
+.card.matched {
+  opacity: 0.8;
+  pointer-events: none;
+}
+
+button {
+  color: white;
+  background-color: #222;
+  border: 1px solid white;
+  padding: 10px 20px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  border-radius: 5px;
+  border-radius: 5px;
+}
